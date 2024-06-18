@@ -37,7 +37,7 @@ function Contact() {
 
   return (
     <div className='contact'>
-      <div>GeneralEvie9@outlook.com</div>
+      <h1>GeneralEvie9@outlook.com</h1>
       <form onSubmit={handleSubmit}>
         <input 
           type='text' 

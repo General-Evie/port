@@ -164,6 +164,10 @@ li:hover {
     gap: 5rem;
 }
 
+.contact h1 {
+    margin: 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
