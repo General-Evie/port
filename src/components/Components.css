@@ -28,15 +28,15 @@ nav {
     border-radius: 2rem;
     box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .4);
     padding: 2rem;
-    margin: 10rem 0;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 ul {
-    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    left: 0;
+    /* left: 0; */
     padding: 0;
     margin: 0;
 }
@@ -73,9 +73,12 @@ li:hover {
 
 .about {
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    /* width: 80%; */
     gap: 2rem;
-    columns: 2;
+    /* columns: 2; */
 }
 
 .profilePic {
@@ -134,16 +137,15 @@ li:hover {
 }
 .thumbnail a {
     text-decoration: none;
-    color: #fff;
 }
 
 .card-description {
     position: absolute;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     left: 0;
     background: linear-gradient(rgba(210, 180, 140, .2), rgba(210, 180, 140, 1));
-    /* opacity: .5; */
     bottom: 0;
     padding: .3rem;
     transform: translateY(70%);
@@ -152,6 +154,10 @@ li:hover {
 
 .project-1:hover .card-description {
     transform: translateY(0);
+}
+
+.ibuild{
+    color: blueviolet;
 }
 
 .contact {
@@ -190,4 +196,76 @@ form button {
 footer {
     width: 3rem;
     height: 3rem;
+}
+
+@media only screen and (max-width: 430px) {
+
+    nav {
+        font-size: .8em;
+    }
+
+    ul {
+        width: 73svw;
+    }
+
+    li {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .about {
+        flex-direction: column;
+        width: 90svw;
+    }
+
+    .profilePic {
+        width: 7.5rem;
+        height: 6rem;
+    }
+
+    .bio {
+        font-size: .8em;
+        text-align: center; 
+        width: 80%; 
+        margin: 0;
+    }
+
+      
+    .project-1 {
+        width: 50%;
+    }
+
+    .card-description {
+        transform: translateY(0)
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .contact h1 {
+        font-size: 1.5em;
+    }
+
+    .contact {
+        gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    nav {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .card-description {
+        font-size: .8em;
+    }
+
+    /* .project-1 {
+        height: 30svh;
+    } */
 }

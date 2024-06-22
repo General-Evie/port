@@ -1,4 +1,3 @@
-import About from './components/About';
 import Container from './components/Container';
 import './components/Components.css'
 

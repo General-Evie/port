@@ -5,7 +5,8 @@ function About() {
   return (
     <div className='about'>
         <img className='profilePic' src={profilePic}></img>
-        <div className='bio'>It’s not just the specifications that are changing, either. Much has been made of permutations to Google’s algorithms, which are beginning to favor better written, more authoritative content (and making work for the growing content strategy industry). Google’s bots are now charged with asking questions like, “Was the article edited well, or does it appear sloppy or hastily produced?” and “Does this article provide a complete or comprehensive description of the topic?,” the sorts of questions one might expect to be posed by an earnest college professor.</div>
+        {/* <h1>Hi I'm Evie</h1> */}
+        <p className='bio'>Results-oriented web developer in front-end development. Proficient in HTML, CSS, JavaScript, with a focus on creating responsive and user-friendly interfaces. Experienced in working with React and TypeScript to build dynamic web applications. Strong communication and problem-solving skills, with a passion for learning new technologies. Seeking to leverage expertise to contribute to a dynamic development team.</p>
     </div> 
   )
 }
