@@ -10,7 +10,21 @@ html {
     height: 100vh;
     width: 100vw;
     /* margin: 0 auto; */
-    background: linear-gradient(135deg, tan, grey);
+    background: linear-gradient(135deg, rgba(210, 180, 140, 0.5), rgba(128, 128, 128, 0.5));
+    background-image: url(./images/snow-mountains.png);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba( 135, 206, 235, 0.5), rgba(128, 128, 128, 0.7));
+    z-index: -5;
+    pointer-events: none; 
 }
 
 body {
@@ -24,12 +38,12 @@ nav {
     align-items: center;
     width: 100%;
     height: 3rem;
-    background: linear-gradient(360deg, grey, tan);
+    background: linear-gradient(180deg, rgba(135, 206, 235, 0.5), rgba(128, 128, 128, 0.7));
     border-radius: 2rem;
-    box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .4);
+    box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .5);
     padding: 2rem;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 }
 
 ul {
@@ -74,6 +88,7 @@ li:hover {
 .about {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     /* width: 80%; */
@@ -81,10 +96,15 @@ li:hover {
     /* columns: 2; */
 }
 
+.bio {
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
 .profilePic {
     flex: none;
     width: 10rem;
-    height: 8rem;
+    height: 10rem;
     border-radius: 50%;
     border: 3px solid grey;
 }
@@ -202,6 +222,8 @@ footer {
 
     nav {
         font-size: .8em;
+        margin-bottom: 5rem;
+
     }
 
     ul {
@@ -225,7 +247,7 @@ footer {
 
     .profilePic {
         width: 7.5rem;
-        height: 6rem;
+        height: 7.5rem;
     }
 
     .bio {
@@ -258,7 +280,7 @@ footer {
 @media only screen and (max-width: 375px) {
     nav {
         margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
     }
 
     .card-description {

@@ -37,6 +37,7 @@ function Container() {
       {activeTab === 'about' && <About />}
       {activeTab === 'project' && <Project />}
       {activeTab === 'contact' && <Contact />}
+      <div className='overlay'></div>
     </div>
   )
 }
