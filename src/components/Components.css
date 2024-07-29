@@ -9,7 +9,6 @@ html {
     justify-content: center;
     height: 100svh;
     width: 100svw;
-    /* margin: 0 auto; */
     color: #fff;
     background: linear-gradient(135deg, rgba(210, 180, 140, 0.5), rgba(128, 128, 128, 0.5));
     background-image: url(./images/snow-mountains.png);
@@ -46,7 +45,7 @@ nav {
     border-radius: 2rem;
     box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .5);
     padding: 2rem;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     margin-bottom: 8rem;
 }
 
@@ -54,7 +53,6 @@ ul {
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    /* left: 0; */
     padding: 0;
     margin: 0;
 }
@@ -63,11 +61,8 @@ li {
     display: inline-block;
     list-style-type: none;
     font-size: 2em;
-
-    /* text-shadow: 0 0 0.125em rgb(7, 230, 192); */
     color:#fff;
     padding: 0 1rem;
-    /* font-family: 'Tilt Neon', sans-serif; */
 }
 
 nav ul {
@@ -96,9 +91,7 @@ li:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* width: 80%; */
     gap: 2rem;
-    /* columns: 2; */
 }
 
 .bio {
@@ -119,12 +112,6 @@ li:hover {
     justify-content: center;
     align-items: center;
 }
-
-/* .project-imgs {
-    max-width: 100%;
-    height: auto;
-} */
-
 
 .project-1 {
     display: flex;
@@ -291,8 +278,4 @@ footer {
     .card-description {
         font-size: .8em;
     }
-
-    /* .project-1 {
-        height: 30svh;
-    } */
 }
