@@ -7,8 +7,8 @@
 html {
     display: flex;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100svh;
+    width: 100svw;
     /* margin: 0 auto; */
     color: #fff;
     background: linear-gradient(135deg, rgba(210, 180, 140, 0.5), rgba(128, 128, 128, 0.5));
@@ -25,7 +25,7 @@ html {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 200%;
+    height: 100%;
     background: linear-gradient(135deg, rgba( 135, 206, 235, 0.5), rgba(128, 128, 128, 0.7));
     z-index: -5;
     pointer-events: none; 
