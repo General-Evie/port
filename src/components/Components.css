@@ -13,6 +13,7 @@ html {
     color: #fff;
     background: linear-gradient(135deg, rgba(210, 180, 140, 0.5), rgba(128, 128, 128, 0.5));
     background-image: url(./images/snow-mountains.png);
+    background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
 }
