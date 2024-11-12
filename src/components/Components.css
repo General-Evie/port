@@ -160,7 +160,7 @@ li:hover {
     background: linear-gradient(rgba(210, 180, 140, .2), rgba(210, 180, 140, 1));
     bottom: 0;
     padding: .3rem;
-    transform: translateY(70%);
+    transform: translateY(88%);
     transition: transform 500ms ease;
 }
 

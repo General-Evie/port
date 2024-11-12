@@ -17,15 +17,17 @@ function Project() {
         <div className='thumbnail'>
           <div className='card-description'>
             <h1>Food Diary App</h1>
-            <div>
-              Recreation of a food Diary app by 
+            <div className='p1-description'>
+              This Food Diary app, recreated from an
               <a
                 className='ibuild'
                 href='https://play.google.com/store/apps/details?id=com.ibuild.fooddiary&hl=en_US&pli=1'
                 target='blank'
-                onClick={handleAnchorClick}
-              > ibuild lab
-              </a>, to keep track of daily food intake.</div>
+                onClick={handleAnchorClick}>
+                iBuild Labs
+              </a>
+              application using React and TypeScript, lets you track your daily meals. You can add, update, or delete entries with details like description, time, and date. It's an easy way to stay on top of your eating habits and make healthier choices.
+            </div>
           </div>
         </div>
       </div>
