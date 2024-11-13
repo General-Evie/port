@@ -11,7 +11,7 @@ html {
     width: 100svw;
     color: #fff;
     background: linear-gradient(135deg, rgba(210, 180, 140, 0.5), rgba(128, 128, 128, 0.5));
-    background-image: url(./images/snow-mountains.png);
+    background-image: url(./images/snow-mountains.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    font-family: 'Tilt Neon', sans-serif;
+    font-family: sans-serif;
     max-width: 45rem;
 }
 
@@ -133,7 +133,7 @@ li:hover {
 }
 
 .thumbnail {
-    background-image: url('./images/main2.png');
+    background-image: url('./images/main2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -160,7 +160,7 @@ li:hover {
     background: linear-gradient(rgba(210, 180, 140, .2), rgba(210, 180, 140, 1));
     bottom: 0;
     padding: .3rem;
-    transform: translateY(88%);
+    transform: translateY(72%);
     transition: transform 500ms ease;
 }
 
@@ -170,6 +170,7 @@ li:hover {
 
 .ibuild{
     color: blueviolet;
+    /* margin: 0 .5ch; */
 }
 
 .contact {
@@ -209,6 +210,15 @@ footer {
     width: 3rem;
     height: 3rem;
 }
+
+.feedback-message {
+    margin-top: 10px;
+    color: #39FF14; 
+  }
+  
+  .feedback-message.error {
+    color: red; 
+  }
 
 @media only screen and (max-width: 430px) {
 

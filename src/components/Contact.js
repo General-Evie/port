@@ -9,6 +9,8 @@ function Contact() {
     message: '',
   });
 
+  const [feedback, setFeedback] = useState({ message: '', isError: false });
+
   console.log(formData)
 
   const handleChange = (e) => {
@@ -22,8 +24,10 @@ function Contact() {
     emailjs.send('service_fhu8r2y', 'template_qr6wr3g', formData, 'f466Xh4grqplIldlF')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setFeedback({ message: 'Your message has been sent successfully!', isError: false });
       }, (err) => {
         console.log('FAILED...', err);
+        setFeedback({ message: 'There was an error sending your message. Please try again later.', isError: true });
       });
 
     setFormData({
@@ -39,6 +43,7 @@ function Contact() {
     <div className='contact'>
       <h1>GeneralEvie9@outlook.com</h1>
       <form onSubmit={handleSubmit}>
+        <div>Name</div>
         <input 
           type='text' 
           name='name' 
@@ -47,6 +52,7 @@ function Contact() {
           placeholder='Your Name' 
           required 
         />
+        <div>Email</div>
         <input 
           type='email' 
           name='email' 
@@ -55,6 +61,7 @@ function Contact() {
           placeholder='Your Email' 
           required 
         />
+        <div>Message</div>
         <textarea 
           name='message' 
           value={formData.message} 
@@ -62,7 +69,11 @@ function Contact() {
           placeholder='Your Message' 
           required 
         />
+        
         <button type='submit'>Send</button>
+        {feedback && <p className={`feedback-message ${feedback.isError ? 'error' : ''}`}>
+          {feedback.message}
+        </p>}
       </form>
       <footer>
         <a href="https://github.com/General-Evie" target='blank' ><GitIcon /></a>
