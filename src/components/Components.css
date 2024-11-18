@@ -10,24 +10,10 @@ html {
     height: 100svh;
     width: 100svw;
     color: #fff;
-    background: linear-gradient(135deg, rgba(210, 180, 140, 0.5), rgba(128, 128, 128, 0.5));
-    background-image: url(./images/snow-mountains.avif);
+    background: #0d0d0d;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba( 135, 206, 235, 0.5), rgba(128, 128, 128, 0.7));
-    z-index: -5;
-    pointer-events: none; 
 }
 
 body {
@@ -41,9 +27,6 @@ nav {
     align-items: center;
     width: 100%;
     height: 3rem;
-    background: linear-gradient(180deg, rgba(135, 206, 235, 0.5), rgba(128, 128, 128, 0.7));
-    border-radius: 2rem;
-    box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .5);
     padding: 2rem;
     margin-top: 5%;
     margin-bottom: 4rem;
@@ -51,7 +34,8 @@ nav {
 
 ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5rem;
     width: 100vw;
     padding: 0;
     margin: 0;
@@ -61,29 +45,42 @@ li {
     display: inline-block;
     list-style-type: none;
     font-size: 2em;
-    color:#fff;
-    padding: 0 1rem;
+    color: grey;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
 }
 
 nav ul {
+    display: flex;
     list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
+    padding: 10px;
     cursor: pointer;
 }
 
-nav ul li.active {
-    text-shadow: 0 0 0.125em red;
-}
-
+nav ul li.active,
 li:hover {
-    text-shadow: 0 0 0.125em red;
+    background: linear-gradient(to bottom,
+            #ccc,
+            #999 50%,
+            #333 80%,
+            #0d0d0d 100%),
+        linear-gradient(to right,
+            #333,
+            #ccc 50%,
+            #333);
+    background-blend-mode: multiply;
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, .5);
+    border: none;
+    color: white;
     cursor: pointer;
 }
+
+;
 
 .about {
     display: flex;
@@ -138,8 +135,8 @@ li:hover {
     background-repeat: no-repeat;
     width: 100%;
     height: 25vh;
-    padding: 7rem 0 0 ;
-    
+    padding: 7rem 0 0;
+
 }
 
 .thumbnail h1 {
@@ -147,6 +144,7 @@ li:hover {
     font-size: 1em;
     margin: 0;
 }
+
 .thumbnail a {
     text-decoration: none;
 }
@@ -168,9 +166,8 @@ li:hover {
     transform: translateY(0);
 }
 
-.ibuild{
+.ibuild {
     color: blueviolet;
-    /* margin: 0 .5ch; */
 }
 
 .contact {
@@ -187,15 +184,23 @@ li:hover {
     margin: 0;
 }
 
+.message-box {
+    height: 150px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+
 }
 
-input, textarea {
+input,
+textarea {
+    font: inherit;
+    margin-bottom: 2rem;
+    padding: 0.5em 0.25em;
     width: 20rem;
 }
 
@@ -211,16 +216,48 @@ footer {
     height: 3rem;
 }
 
+.container {
+    position: relative;
+}
+
+.tab-content {
+    position: absolute;
+    min-width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tab-content.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tab-content.to-left {
+    transform: translateX(-100%);
+}
+
+.tab-content.to-right {
+    transform: translateX(100%);
+}
+
 .feedback-message {
     margin-top: 10px;
-    color: #39FF14; 
-  }
-  
-  .feedback-message.error {
-    color: red; 
-  }
+    color: #39FF14;
+}
+
+.feedback-message.error {
+    color: red;
+}
 
 @media only screen and (max-width: 430px) {
+
+    h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
 
     nav {
         font-size: .8em;
@@ -254,12 +291,12 @@ footer {
 
     .bio {
         font-size: .8em;
-        text-align: center; 
-        width: 80%; 
+        text-align: center;
+        width: 80%;
         margin: 0;
     }
 
-      
+
     .project-1 {
         width: 50%;
     }
@@ -281,11 +318,15 @@ footer {
 
 @media only screen and (max-width: 375px) {
     nav {
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
     }
 
     .card-description {
         font-size: .8em;
+    }
+
+    .contact {
+        gap: 1rem;
     }
 }

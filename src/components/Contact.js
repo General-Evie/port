@@ -43,7 +43,7 @@ function Contact() {
     <div className='contact'>
       <h1>GeneralEvie9@outlook.com</h1>
       <form onSubmit={handleSubmit}>
-        <div>Name</div>
+        <label>Name</label>
         <input 
           type='text' 
           name='name' 
@@ -52,7 +52,7 @@ function Contact() {
           placeholder='Your Name' 
           required 
         />
-        <div>Email</div>
+        <label>Email</label>
         <input 
           type='email' 
           name='email' 
@@ -61,13 +61,14 @@ function Contact() {
           placeholder='Your Email' 
           required 
         />
-        <div>Message</div>
+        <label>Message</label>
         <textarea 
           name='message' 
           value={formData.message} 
           onChange={handleChange} 
           placeholder='Your Message' 
           required 
+          className="message-box"
         />
         
         <button type='submit'>Send</button>
