@@ -117,7 +117,7 @@ li:hover {
     position: relative;
     padding: 1rem;
     width: 30%;
-    background: linear-gradient(180deg, grey, tan);
+    background: #333;
     border-radius: 1rem;
     transition: transform 500ms ease;
     box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .4);
@@ -155,7 +155,7 @@ li:hover {
     justify-content: center;
     flex-direction: column;
     left: 0;
-    background: linear-gradient(rgba(210, 180, 140, .2), rgba(210, 180, 140, 1));
+    background: rgba(51, 51, 51, 0.4);
     bottom: 0;
     padding: .3rem;
     transform: translateY(72%);
